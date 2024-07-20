@@ -775,9 +775,9 @@ namespace platf::dxgi {
         BOOST_LOG(warning) << "Failed to increase encoding GPU thread priority. Please run application as administrator for optimal performance.";
       }
 
-      auto default_color_vectors = ::video::color_vectors_from_colorspace(::video::colorspace_e::rec601, false);
+      auto default_color_vectors = ::video::color_vectors_from_colorspace(::video::colorspace_e::rec709, false);
       if (!default_color_vectors) {
-        BOOST_LOG(error) << "Missing color vectors for Rec. 601"sv;
+        BOOST_LOG(error) << "Missing color vectors for Rec. 709"sv;
         return -1;
       }
 

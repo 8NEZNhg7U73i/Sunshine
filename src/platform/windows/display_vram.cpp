@@ -612,9 +612,9 @@ namespace platf::dxgi {
         return -1;
       }
 
-      auto default_color_vectors = ::video::color_vectors_from_colorspace(::video::colorspace_e::rec709, true);
+      auto default_color_vectors = ::video::color_vectors_from_colorspace(::video::colorspace_e::rec601, false);
       if (!default_color_vectors) {
-        BOOST_LOG(error) << "Missing color vectors for Rec. 709"sv;
+        BOOST_LOG(error) << "Missing color vectors for Rec. 601"sv;
         return -1;
       }
 

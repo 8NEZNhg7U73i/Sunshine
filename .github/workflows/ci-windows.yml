@@ -4,6 +4,9 @@ permissions:
   contents: read
 
 on:
+  push:
+    branches:
+    - v2025.924.154138-branch
   workflow_call:
     inputs:
       release_commit:

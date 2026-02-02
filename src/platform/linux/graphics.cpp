@@ -811,7 +811,7 @@ namespace egl {
     gl::ctx.UseProgram(sws.program[1].handle());
     gl::ctx.Uniform1fv(loc_width_i, 1, &width_i);
 
-    auto color_p = video::color_vectors_from_colorspace(video::colorspace_e::rec601, false);
+    auto color_p = video::color_vectors_from_colorspace(video::colorspace_e::rec709, false);
     std::pair<const char *, std::string_view> members[] {
       std::make_pair("color_vec_y", util::view(color_p->color_vec_y)),
       std::make_pair("color_vec_u", util::view(color_p->color_vec_u)),

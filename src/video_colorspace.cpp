@@ -31,7 +31,7 @@ namespace video {
       switch (config.encoderCscMode >> 1) {
         case 0:
           // Rec. 601
-          colorspace.colorspace = colorspace_e::rec601;
+          colorspace.colorspace = colorspace_e::rec709;
           break;
 
         case 1:
@@ -246,10 +246,6 @@ namespace video {
     };
 
     static constexpr color_t colors[] = {
-      generate_color_vectors({colorspace_e::rec601, false, 8}),
-      generate_color_vectors({colorspace_e::rec601, true, 8}),
-      generate_color_vectors({colorspace_e::rec601, false, 10}),
-      generate_color_vectors({colorspace_e::rec601, true, 10}),
       generate_color_vectors({colorspace_e::rec709, false, 8}),
       generate_color_vectors({colorspace_e::rec709, true, 8}),
       generate_color_vectors({colorspace_e::rec709, false, 10}),
